@@ -31,36 +31,12 @@ Maven	Build & dependency management
 Docker	Containerization
 Swagger / OpenAPI	API documentation
 JUnit & Mockito	Testing
-Architecture
-Client
-  |
-  | REST API
-  v
-Spring Boot
-  |
-  +-- Spring Security + JWT
-  +-- Controller
-  +-- Service
-  +-- Repository
-  |
-  +----------+-----------+
-  |                      |
-  v                      v
-PostgreSQL              AWS S3
-Metadata                Actual Files
 
 PostgreSQL stores users, roles, file metadata, and shared-link information, while the actual files are stored in AWS S3.
 
 API Documentation
 
 Swagger/OpenAPI is used to document and test the REST APIs.
-
-When running locally:
-
-http://localhost:8080/swagger-ui
-Running Locally
-Prerequisites
-Java 21
 Maven
 PostgreSQL
 AWS account with an S3 bucket
